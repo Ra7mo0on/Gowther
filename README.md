@@ -25,12 +25,15 @@ For security reasons and to avoid script kiddies, the key is stored on the victi
 Edit the lines 67 and 68, change the boolean values to select the way in which the data will be sent.
 
 In the case of using SMTP, create a Google account and in settings enable "Access to less secure applications". Then insert the data of the configuration you want to use.
+## Implementing Threads
+Gowther now has more efficient and faster encryption, the file paths are divided into threads and run in parallel, depending on the types of files it finds.
 
+I did a simple test to determine the execution time with 380 files, it only took 4 seconds.
 ## In Development
 - [x] Send logs to SMTP server.
 - [x] Graphical Interfaces.
 - [x] Send information to MySQL database.
-- [ ] Multithreading for fast encryption.
+- [x] Multithreading for fast encryption.
 - [ ] Support for Windows.
 - [ ] Encrypt external storage drives.
 
